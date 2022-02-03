@@ -10,7 +10,7 @@
 |
 */
 
-import './node_modules/reflect-metadata';
+import './node_modules/reflect-metadata/index';
 import sourceMapSupport from 'source-map-support';
 import { Ignitor } from '@adonisjs/core/build/standalone';
 
