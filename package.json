@@ -7,9 +7,6 @@
     "build": "node ace build --production",
     "start:prod": "node ./build/server.js"
   },
-  "engines": {
-    "node": "12.18.3"
-  },
   "devDependencies": {
     "@adonisjs/assembler": "^1.1.1",
     "adonis-preset-ts": "^2.1.0",
