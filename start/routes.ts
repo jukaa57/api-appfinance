@@ -21,7 +21,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async () => {
-  return { status: 'TUDO OK' }
+  return { status: 'Connenction Sucess' }
 })
 
 
