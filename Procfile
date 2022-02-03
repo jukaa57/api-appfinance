@@ -1,2 +1,2 @@
-web:node build/server.js
+web:ENV_SILENT=true node build/server.ts
 release:ENV_SILENT=true
