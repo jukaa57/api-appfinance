@@ -38,13 +38,13 @@ export default class AluguelController {
     public async getAluguelPago () {
         const s = await Aluguel.query()
                         .where('situacao', '1')
-                        .orderBy('desc')
+                        .orderBy('asc')
         return s;
     }
     public async getAluguelAberto() {
         const s = await Aluguel.query()
                             .where('situacao', '2')
-                            .orderBy('desc')
+                            .orderBy('asc')
         return s;
     }
     public async getAluguelUltimo () {
