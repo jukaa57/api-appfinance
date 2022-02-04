@@ -1,2 +1,2 @@
-release: ENV_SILENT=true node ./build/server.js
-web: ENV_SILENT=true node ./build/server.js
+release: npm start
+web: ENV_SILENT=true npm start
