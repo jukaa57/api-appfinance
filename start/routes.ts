@@ -29,6 +29,9 @@ Route.post('/aluguel', "AluguelController.createAluguel")
 Route.get('/galuguel', "AluguelController.getAluguel")
 Route.get('/galuguelpago', "AluguelController.getAluguelPago")
 Route.get('/galuguelaberto', "AluguelController.getAluguelAberto")
+Route.get('/galuguelultima', "AluguelController.getAluguelUltimoAberto")
+
+
 
 
 Route.post('/ualuguel', "AluguelController.updateAluguel")

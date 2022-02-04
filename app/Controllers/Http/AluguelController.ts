@@ -40,9 +40,9 @@ export default class AluguelController {
                         .where('situacao', '1');
         return s;
     }
-    public async getAluguelAberto() {
+    public async getAluguelUltimoAberto() {
         const s = await Aluguel.query()
-                            .where('situacao', '2');
-        return s;
+                            .where('situacao','=', '2' || '3' || '4') 
+        return s[-1]
     }
 }  
