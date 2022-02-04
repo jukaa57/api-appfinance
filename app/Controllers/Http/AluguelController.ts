@@ -47,9 +47,10 @@ export default class AluguelController {
                             .orderBy('desc')
         return s;
     }
-    public async getAluguelUltimo() {
-        const g = await Aluguel.query()
-                            .whereNot('situacao', '1') 
-        return g;
+    public async getAluguelUltimo () {
+        const s = await Aluguel.query()
+                        .whereNot('situacao', '1')
+        return s;
     }
+
 }  
