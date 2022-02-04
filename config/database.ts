@@ -24,7 +24,7 @@ const databaseConfig: DatabaseConfig = {
   | file.
   |
   */
-  connection: Application.inDev ? 'sqlite' : 'mysql',
+  connection: Application.inDev ? 'mysql' : 'mysql',
 
 
   connections: {
