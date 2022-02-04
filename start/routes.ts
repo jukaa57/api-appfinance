@@ -30,7 +30,6 @@ Route.post('/aluguel', "AluguelController.createAluguel")
 Route.get('/galuguel', "AluguelController.getAluguel")
 Route.get('/galuguelpago', "AluguelController.getAluguelPago")
 Route.get('/galuguelaberto', "AluguelController.getAluguelAberto")
-Route.get('/galuguelulti', "AluguelController.getAluguelUltimo")
 
 Route.put('/ualuguel', "AluguelController.updateAluguel")
 
