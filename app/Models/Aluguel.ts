@@ -23,7 +23,6 @@ export default class Aluguel extends BaseModel {
   @column()
   public situacao: string
 
-
   // @column.dateTime({ autoCreate: true })
   // public createdAt: DateTime
 

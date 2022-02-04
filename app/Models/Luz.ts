@@ -23,7 +23,6 @@ export default class Luz extends BaseModel {
   @column()
   public situacao: string
 
-
   // @column.dateTime({ autoCreate: true })
   // public createdAt: DateTime
 
