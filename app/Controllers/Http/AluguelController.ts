@@ -48,8 +48,8 @@ export default class AluguelController {
         return s;
     }
     public async getAluguelUltimo() {
-        const s = await Aluguel.query()
-                            .where('situacao', '!=', '1') 
-        return s;
+        const g = await Aluguel.query()
+                            .whereNot('situacao', '1') 
+        return g;
     }
 }  

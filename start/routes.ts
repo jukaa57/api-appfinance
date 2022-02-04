@@ -26,14 +26,11 @@ Route.get('/', async () => {
 
 
 Route.post('/aluguel', "AluguelController.createAluguel")
+
 Route.get('/galuguel', "AluguelController.getAluguel")
 Route.get('/galuguelpago', "AluguelController.getAluguelPago")
 Route.get('/galuguelaberto', "AluguelController.getAluguelAberto")
-
 Route.get('/galuguelultimo', "AluguelController.getAluguelUltimo")
-
-
-
 
 Route.put('/ualuguel', "AluguelController.updateAluguel")
 
