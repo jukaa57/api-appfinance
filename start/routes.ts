@@ -29,10 +29,11 @@ Route.post('/aluguel', "AluguelController.createAluguel")
 Route.get('/galuguel', "AluguelController.getAluguel")
 Route.get('/galuguelpago', "AluguelController.getAluguelPago")
 Route.get('/galuguelaberto', "AluguelController.getAluguelAberto")
-Route.get('/galuguelultima', "AluguelController.getAluguelUltimoAberto")
+
+Route.get('/galuguelultimo', "AluguelController.getAluguelUltimo")
 
 
 
 
-Route.post('/ualuguel', "AluguelController.updateAluguel")
+Route.put('/ualuguel', "AluguelController.updateAluguel")
 
