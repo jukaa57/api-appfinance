@@ -30,7 +30,17 @@ Route.post('/aluguel', "AluguelController.createAluguel")
 Route.get('/galuguel', "AluguelController.getAluguel")
 Route.get('/galuguelpago', "AluguelController.getAluguelPago")
 Route.get('/galuguelaberto', "AluguelController.getAluguelAberto")
-Route.get('/galuguelultimo', "AluguelController.getAluguelUltimo")
+Route.get('/galuguelulti', "AluguelController.getAluguelUltimo")
 
 Route.put('/ualuguel', "AluguelController.updateAluguel")
+
+
+Route.post('/luz', "AluguelController.createLuz")
+
+Route.get('/gluz', "LuzController.getLuz")
+Route.get('/gluzpago', "LuzController.getLuzPago")
+Route.get('/gluzaberto', "LuzController.getLuzAberto")
+Route.get('/gluzulti', "LuzController.getLuzUltimo")
+
+Route.put('/uluz', "LuzController.updateLuz")
 
