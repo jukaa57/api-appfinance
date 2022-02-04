@@ -47,7 +47,7 @@ export default class AluguelController {
     }
     public async getAluguelUltimoAberto() {
         const s = await Aluguel.query()
-                            .whereNot('situacao', '1') 
+                            .where('situacao', '!=', '1') 
         
         return s;
     }
