@@ -40,10 +40,15 @@ export default class AluguelController {
                         .where('situacao', '1');
         return s;
     }
+    public async getAluguelAberto() {
+        const s = await Aluguel.query()
+                            .where('situacao', '2');
+        return s;
+    }
     public async getAluguelUltimoAberto() {
         const s = await Aluguel.query()
                             .whereNot('situacao', '1') 
         
-        return s
+        return s;
     }
 }  
