@@ -34,7 +34,7 @@ Route.get('/galuguelaberto', "AluguelController.getAluguelAberto")
 Route.put('/ualuguel', "AluguelController.updateAluguel")
 
 
-Route.post('/luz', "AluguelController.createLuz")
+Route.post('/luz', "LuzController.createLuz")
 
 Route.get('/gluz', "LuzController.getLuz")
 Route.get('/gluzpago', "LuzController.getLuzPago")
