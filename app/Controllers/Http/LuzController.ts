@@ -38,13 +38,13 @@ export default class LuzController {
     public async getLuzPago () {
         const s = await Luz.query()
                         .where('situacao', '1')
-                        .orderBy('desc')
+                        .orderBy('id', 'desc')
         return s;
     }
     public async getLuzAberto() {
         const s = await Luz.query()
                             .where('situacao', '2')
-                            .orderBy('desc')
+                            .orderBy('id', 'desc')
         return s;
     }
     public async getLuzUltimo () {
