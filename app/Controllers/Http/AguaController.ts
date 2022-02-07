@@ -43,14 +43,8 @@ export default class AguaController {
     }
     public async getAguaAberto() {
         const s = await Agua.query()
-                            .where('situacao', '2')
+                            .whereNot('situacao', '1')
                             .orderBy('id', 'desc')
         return s;
     }
-    public async getAguaUltimo () {
-        const s = await Agua.query()
-                        .whereNot('situacao', '1')
-        return s;
-    }
-
 }  

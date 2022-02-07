@@ -43,14 +43,8 @@ export default class LuzController {
     }
     public async getLuzAberto() {
         const s = await Luz.query()
-                            .where('situacao', '2')
+                            .whereNot('situacao', '1')
                             .orderBy('id', 'desc')
         return s;
     }
-    public async getLuzUltimo () {
-        const s = await Luz.query()
-                        .whereNot('situacao', '1')
-        return s;
-    }
-
 }  

@@ -43,14 +43,8 @@ export default class InternetController {
     }
     public async getInternetAberto() {
         const s = await Internet.query()
-                            .where('situacao', '2')
+                            .whereNot('situacao', '1')
                             .orderBy('id', 'desc')
         return s;
     }
-    public async getInternetUltimo () {
-        const s = await Internet.query()
-                        .whereNot('situacao', '1')
-        return s;
-    }
-
 }  
