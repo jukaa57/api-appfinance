@@ -32,7 +32,7 @@ export default class TransporteController {
             const s = await Transporte.all();
         return s;
     }
-    public async getTransportevalor () {
+    public async getTransporteValor () {
         const s = await Transporte.query()
             .select('d_pagamento')
             .sum('valor')
