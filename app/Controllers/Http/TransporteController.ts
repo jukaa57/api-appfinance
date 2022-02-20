@@ -6,24 +6,22 @@ import Transporte from 'App/Models/Transporte';
 export default class TransporteController {
 
     public async createTransporte ({  request,  }: HttpContextContract)  {
-        const { id, valor, d_pagamento, f_pagamento, situacao } = request.all();
-
+        const { id, nome, valor, d_pagamento, situacao } = request.all();
         const r = await Transporte.create({
             id,
+            nome,
             valor, 
-            d_pagamento, 
-            f_pagamento,
+            d_pagamento,
             situacao
         });
         return r
     }
 
     public async updateTransporte ({  request,  }: HttpContextContract)  {
-        const { id, d_pagamento, f_pagamento, situacao } = request.all();
-
+        const { id, nome, d_pagamento, situacao } = request.all();
         const r = await Transporte.findOrFail(id);
+        r.nome = nome,
         r.d_pagamento = d_pagamento,
-        r.f_pagamento = f_pagamento,
         r.situacao = situacao
         await r.save();
 
@@ -36,7 +34,9 @@ export default class TransporteController {
     }
     public async getTransportevalor () {
         const s = await Transporte.query()
-            .select('valor')
+            .select('d_pagamento')
+            .sum('valor')
+            .orderBy('d_pagamento', 'desc')
         return s;
     }
 

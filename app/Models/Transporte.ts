@@ -18,9 +18,6 @@ export default class Transporte extends BaseModel {
   public d_pagamento: string
 
   @column()
-  public f_pagamento: string
-
-  @column()
   public situacao: string
 
   // @column.dateTime({ autoCreate: true })
