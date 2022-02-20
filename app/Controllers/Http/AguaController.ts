@@ -47,4 +47,11 @@ export default class AguaController {
                             .orderBy('id', 'desc')
         return s;
     }
+
+    public async deleteAgua ({  request,  }: HttpContextContract) {
+        const { id } = request.all();
+        const r = await Agua.findOrFail(id);
+
+        await r.delete();
+    }
 }  

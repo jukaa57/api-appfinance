@@ -43,8 +43,15 @@ export default class LuzController {
     }
     public async getLuzAberto() {
         const s = await Luz.query()
-                            .whereNot('situacao', '1')
-                            .orderBy('id', 'desc')
+            .whereNot('situacao', '1')
+            .orderBy('id', 'desc')
         return s;
+    }
+
+    public async deleteLuz ({  request,  }: HttpContextContract) {
+        const { id } = request.all();
+        const r = await Luz.findOrFail(id);
+
+        await r.delete();
     }
 }  

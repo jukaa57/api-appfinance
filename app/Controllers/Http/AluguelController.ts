@@ -47,4 +47,11 @@ export default class AluguelController {
                             .orderBy('id', 'desc')
         return s;
     }
+
+    public async deleteAluguel ({  request,  }: HttpContextContract) {
+        const { id } = request.all();
+        const r = await Aluguel.findOrFail(id);
+
+        await r.delete();
+    }
 }  

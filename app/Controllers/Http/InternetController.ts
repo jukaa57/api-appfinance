@@ -47,4 +47,11 @@ export default class InternetController {
                             .orderBy('id', 'desc')
         return s;
     }
+
+    public async deleteInternet ({  request,  }: HttpContextContract) {
+        const { id } = request.all();
+        const r = await Internet.findOrFail(id);
+
+        await r.delete();
+    }
 }  

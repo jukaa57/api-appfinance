@@ -30,24 +30,32 @@ Route.get('/galuguel', "AluguelController.getAluguel")
 Route.get('/galuguelpago', "AluguelController.getAluguelPago")
 Route.get('/galuguelaberto', "AluguelController.getAluguelAberto")
 Route.put('/ualuguel', "AluguelController.updateAluguel")
+Route.post('/deletealuguel', "AluguelController.deleteAluguel")
+
 
 Route.post('/luz', "LuzController.createLuz")
 Route.get('/gluz', "LuzController.getLuz")
 Route.get('/gluzpago', "LuzController.getLuzPago")
 Route.get('/gluzaberto', "LuzController.getLuzAberto")
 Route.put('/uluz', "LuzController.updateLuz")
+Route.post('/deleteluz', "LuzController.deleteLuz")
+
 
 Route.post('/agua', "AguaController.createAgua")
 Route.get('/gagua', "AguaController.getAgua")
 Route.get('/gaguapago', "AguaController.getAguaPago")
 Route.get('/gaguaaberto', "AguaController.getAguaAberto")
 Route.put('/uagua', "AguaController.updateAgua")
+Route.post('/deleteagua', "AguaController.deleteAgua")
+
 
 Route.post('/internet', "InternetController.createInternet")
 Route.get('/ginternet', "InternetController.getInternet")
 Route.get('/ginternetpago', "InternetController.getInternetPago")
 Route.get('/ginternetaberto', "InternetController.getInternetAberto")
 Route.put('/uinternet', "InternetController.updateInternet")
+Route.post('/deleteinternet', "InternetController.deleteInternet")
+
 
 Route.post('/transporte', "TransporteController.createTransporte")
 Route.get('/gtransporte', "TransporteController.getTransporte")
