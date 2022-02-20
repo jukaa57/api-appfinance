@@ -31,7 +31,7 @@ export default class TransporteController {
     public async getTransporte () {
         const s = await Transporte.query()
             .select('*')
-            .orderBy('id', 'desc')  
+            .orderBy('d_pagamento', 'desc')  
         return s;
     }
     public async getTransporteValor () {
