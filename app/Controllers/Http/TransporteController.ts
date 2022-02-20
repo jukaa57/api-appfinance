@@ -34,9 +34,8 @@ export default class TransporteController {
     }
     public async getTransporteValor () {
         const s = await Transporte.query()
-            .select('d_pagamento')
-            .sum('valor')
-            .orderBy('d_pagamento', 'desc')
+            .select('d_pagamento', 'valor')
+            .orderBy('id', 'desc')
         return s;
     }
 
