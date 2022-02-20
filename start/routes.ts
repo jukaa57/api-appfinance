@@ -50,6 +50,6 @@ Route.get('/ginternetaberto', "InternetController.getInternetAberto")
 Route.put('/uinternet', "InternetController.updateInternet")
 
 Route.post('/transporte', "TransporteController.createTransporte")
-// Route.get('/gtransporte', "TransporteController.getTransporte")
-// Route.get('/gtransportevalor', "TransporteController.getTransporteValor")
+Route.get('/gtransporte', "TransporteController.getTransporte")
+Route.get('/gtransportevalor', "TransporteController.getTransporteValor")
 // Route.put('/utransporte', "TransporteController.updateTransporte")
