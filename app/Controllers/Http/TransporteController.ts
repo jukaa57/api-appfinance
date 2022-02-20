@@ -29,13 +29,14 @@ export default class TransporteController {
     }
 
     public async getTransporte () {
-            const s = await Transporte.all();
+        const s = await Transporte.query()
+            .select('*')
+            .orderBy('id', 'desc')  
         return s;
     }
     public async getTransporteValor () {
         const s = await Transporte.query()
-            .select('d_pagamento', 'valor')
-            .orderBy('id', 'desc')
+            .select('valor')
         return s;
     }
 
