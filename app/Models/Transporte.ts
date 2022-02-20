@@ -7,12 +7,12 @@ export default class Transporte extends BaseModel {
   
   @column({ isPrimary: true })
   public id: number
+  
+  @column()
+  public nome: string
 
   @column()
   public valor: number
-
-  @column()
-  public d_vencimento: string
 
   @column()
   public d_pagamento: string

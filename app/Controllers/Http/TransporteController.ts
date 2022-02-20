@@ -3,15 +3,14 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 // import Database, {  } from '@ioc:Adonis/Lucid/Database';
 import Transporte from 'App/Models/Transporte';
 
-export default class LuzController {
+export default class TransporteController {
 
-    public async createLuz ({  request,  }: HttpContextContract)  {
-        const { id, valor, d_vencimento, d_pagamento, f_pagamento, situacao } = request.all();
+    public async createTransporte ({  request,  }: HttpContextContract)  {
+        const { id, valor, d_pagamento, f_pagamento, situacao } = request.all();
 
         const r = await Transporte.create({
             id,
             valor, 
-            d_vencimento, 
             d_pagamento, 
             f_pagamento,
             situacao
@@ -19,7 +18,7 @@ export default class LuzController {
         return r
     }
 
-    public async updateLuz ({  request,  }: HttpContextContract)  {
+    public async updateTransporte ({  request,  }: HttpContextContract)  {
         const { id, d_pagamento, f_pagamento, situacao } = request.all();
 
         const r = await Transporte.findOrFail(id);
@@ -31,20 +30,13 @@ export default class LuzController {
         return r;
     }
 
-    public async getLuz () {
+    public async getTransporte () {
             const s = await Transporte.all();
         return s;
     }
-    public async getLuzPago () {
+    public async getTransportevalor () {
         const s = await Transporte.query()
-                        .where('situacao', '1')
-                        .orderBy('id', 'desc')
-        return s;
-    }
-    public async getLuzAberto() {
-        const s = await Transporte.query()
-                                .whereNot('situacao', '1')
-                                .orderBy('id', 'desc')
+            .select('valor')
         return s;
     }
 
