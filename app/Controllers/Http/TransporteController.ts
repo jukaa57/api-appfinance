@@ -40,4 +40,10 @@ export default class TransporteController {
         return s;
     }
 
+    public async deleteTransporte ({  request,  }: HttpContextContract) {
+        const { id } = request.all();
+        const r = await Transporte.findOrFail(id);
+
+        await r.delete();
+    }
 }  
