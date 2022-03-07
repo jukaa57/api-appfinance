@@ -61,5 +61,10 @@ Route.post('/transporte', "TransporteController.createTransporte")
 Route.get('/gtransporte', "TransporteController.getTransporte")
 Route.get('/gtransportevalor', "TransporteController.getTransporteValor")
 Route.post('/deletetransporte', "TransporteController.deleteTransporte")
-
 // Route.put('/utransporte', "TransporteController.updateTransporte")
+
+
+Route.post('/mercado', "MercadoController.createMercado")
+Route.get('/gmercado', "MercadoController.getMercado")
+Route.get('/gmercadovalor', "MercadoController.getMercadoValorTotal")
+Route.post('/deletemercado', "MercadoController.deleteMercado")
