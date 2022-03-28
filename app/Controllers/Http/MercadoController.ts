@@ -25,8 +25,7 @@ export default class MercadoController {
     }
 
     public async getMercadoValorTotal() {
-        const s = await Mercado.query()
-        .select('valor')
+        const s = await Mercado.query().select('valor')
         return s;
     }
 

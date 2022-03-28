@@ -68,3 +68,10 @@ Route.post('/mercado', "MercadoController.createMercado")
 Route.get('/gmercado', "MercadoController.getMercado")
 Route.get('/gmercadovalor', "MercadoController.getMercadoValorTotal")
 Route.post('/deletemercado', "MercadoController.deleteMercado")
+
+
+
+Route.post('/meta', "MetaController.createMeta")
+Route.get('/gmeta', "MetaController.getMeta")
+Route.get('/gmetavalor', "MetaController.getMetaValorTotal")
+Route.post('/deletemercado', "MetaController.deleteMeta")
