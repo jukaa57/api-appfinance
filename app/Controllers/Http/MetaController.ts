@@ -6,12 +6,10 @@ import Meta from 'App/Models/Meta';
 export default class MetaController {
 
     public async createMeta ({  request,  }: HttpContextContract)  {
-        const { id, nome_meta, valor, d_validade, valor_depositado } = request.all();
+        const { nome_meta, valor, d_validade } = request.all();
         const r = await Meta.create({
-            id,
             nome_meta,
             valor,
-            valor_depositado,
             d_validade,
         });
         return r
