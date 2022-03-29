@@ -17,10 +17,9 @@ export default class MetaController {
 
     public async deposito ({  request,  }: HttpContextContract)  {
         const { id, valor_depositado } = request.all();
-        const r = await Meta.create({
-            id,
-            valor_depositado,
-        });
+        const r = await Meta.updateOrCreate(
+            id, valor_depositado
+        );
         return r
     }
 
