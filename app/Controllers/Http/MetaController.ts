@@ -10,12 +10,12 @@ export default class MetaController {
         const r = await Meta.create({
             nome_meta,
             valor,
-            d_validade,
+            d_validade
         });
         return r
     }
 
-    public async updateMeta ({  request,  }: HttpContextContract)  {
+    public async deposito ({  request,  }: HttpContextContract)  {
         const { id, valor_depositado } = request.all();
         const r = await Meta.create({
             id,
