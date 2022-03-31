@@ -37,6 +37,13 @@ export default class MetaController {
         return s;
     }
 
+    
+    public async getMetaTotalDepositado({  params  }: HttpContextContract) {
+        const {id} = params.all()
+        const s = await Meta.query().select('valor_depositado').where(id)
+        return s;
+    }
+
     public async deleteMeta ({  request,  }: HttpContextContract) {
         const { id } = request.all();
         const r = await Meta.findOrFail(id);
