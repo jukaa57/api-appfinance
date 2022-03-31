@@ -17,7 +17,7 @@ export default class MetaController {
 
     public async deposito ({  request,  }: HttpContextContract)  {
         const { id, valor_depositado } = request.all();
-        const s = await Meta.query().select('valor_depositado').where(id);
+        const s = await Meta.query().select('valor_depositado').where('id', id);
         const r = await Meta.findOrFail(id);
         r.valor_depositado = s[0] + valor_depositado,
         await r.save();
