@@ -70,11 +70,9 @@ Route.get('/gmercadovalor', "MercadoController.getMercadoValorTotal")
 Route.get('/gmercadovalor', "MercadoController.getMercadoValorTotal")
 Route.post('/deletemercado', "MercadoController.deleteMercado")
 
-
-
-// Route.post('/meta', "MetaController.createMeta")
-// Route.post('/depositar', "MetaController.deposito")
-// Route.get('/gmeta', "MetaController.getMeta")
-// Route.get('/gmetavalor', "MetaController.getMetaValorTotal")
-// Route.get('/gmetadepositado:id', "MetaController.getMetaTotalDepositado")
-// Route.post('/deletemeta', "MetaController.deleteMeta")
+Route.post('/meta', "MetaController.createMeta")
+Route.post('/depositar', "MetaController.deposito")
+Route.get('/gmeta', "MetaController.getMeta")
+Route.get('/gmetavalor', "MetaController.getMetaValorTotal")
+Route.get('/gmetadepositado:id', "MetaController.getMetaTotalDepositado")
+Route.post('/deletemeta', "MetaController.deleteMeta")

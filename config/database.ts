@@ -43,7 +43,7 @@ const databaseConfig: DatabaseConfig = {
       client: 'mysql',
       connection: {
         host: CLEARDB_DATABASE_URL.host as string,
-        port: Number(''),
+        port: Number('3306'),
         user: CLEARDB_DATABASE_URL.username as string,
         password: CLEARDB_DATABASE_URL.password as string,
         database: CLEARDB_DATABASE_URL.pathname.substr(1) as string
