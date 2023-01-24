@@ -9,19 +9,27 @@ export default class Aluguel extends BaseModel {
   public id: number
 
   @column()
-  public valor: number
+  public Nome: string
+
+  @column.dateTime({ autoCreate: true })
+  public dataCad: DateTime
+
+  
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  public dataAtt: DateTime
+
 
   @column()
-  public d_vencimento: string
+  public cpf: string
 
   @column()
-  public d_pagamento: string
+  public cnh: string
 
   @column()
-  public f_pagamento: string
+  public cnh: string
 
   @column()
-  public situacao: string
+  public cnh: string
 
   // @column.dateTime({ autoCreate: true })
   // public createdAt: DateTime

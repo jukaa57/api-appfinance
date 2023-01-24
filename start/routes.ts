@@ -25,54 +25,8 @@ Route.get('/', async () => {
 })
 
 
-Route.post('/aluguel', "AluguelController.createAluguel")
-Route.get('/galuguel', "AluguelController.getAluguel")
-Route.get('/galuguelpago', "AluguelController.getAluguelPago")
-Route.get('/galuguelaberto', "AluguelController.getAluguelAberto")
-Route.put('/ualuguel', "AluguelController.updateAluguel")
-Route.post('/deletealuguel', "AluguelController.deleteAluguel")
+Route.post('/localizacao', "LocalizacaoController.createLocalizacao")
+Route.put('/ulocalizacao', "LocalizacaoController.updateLocalizacao")
+Route.get('/getlocalizacao/:veiculo', "LocalizacaoController.getLocalizacaoVeiculo")
 
-
-Route.post('/luz', "LuzController.createLuz")
-Route.get('/gluz', "LuzController.getLuz")
-Route.get('/gluzpago', "LuzController.getLuzPago")
-Route.get('/gluzaberto', "LuzController.getLuzAberto")
-Route.put('/uluz', "LuzController.updateLuz")
-Route.post('/deleteluz', "LuzController.deleteLuz")
-
-
-Route.post('/agua', "AguaController.createAgua")
-Route.get('/gagua', "AguaController.getAgua")
-Route.get('/gaguapago', "AguaController.getAguaPago")
-Route.get('/gaguaaberto', "AguaController.getAguaAberto")
-Route.put('/uagua', "AguaController.updateAgua")
-Route.post('/deleteagua', "AguaController.deleteAgua")
-
-
-Route.post('/internet', "InternetController.createInternet")
-Route.get('/ginternet', "InternetController.getInternet")
-Route.get('/ginternetpago', "InternetController.getInternetPago")
-Route.get('/ginternetaberto', "InternetController.getInternetAberto")
-Route.put('/uinternet', "InternetController.updateInternet")
-Route.post('/deleteinternet', "InternetController.deleteInternet")
-
-
-Route.post('/transporte', "TransporteController.createTransporte")
-Route.get('/gtransporte', "TransporteController.getTransporte")
-Route.get('/gtransportevalor', "TransporteController.getTransporteValor")
-Route.post('/deletetransporte', "TransporteController.deleteTransporte")
-// Route.put('/utransporte', "TransporteController.updateTransporte")
-
-
-Route.post('/mercado', "MercadoController.createMercado")
-Route.get('/gmercado', "MercadoController.getMercado")
-Route.get('/gmercadovalor', "MercadoController.getMercadoValorTotal")
-Route.get('/gmercadovalor', "MercadoController.getMercadoValorTotal")
-Route.post('/deletemercado', "MercadoController.deleteMercado")
-
-Route.post('/meta', "MetaController.createMeta")
-Route.post('/depositar', "MetaController.deposito")
-Route.get('/gmeta', "MetaController.getMeta")
-Route.get('/gmetavalor', "MetaController.getMetaValorTotal")
-Route.get('/gmetadepositado:id', "MetaController.getMetaTotalDepositado")
-Route.post('/deletemeta', "MetaController.deleteMeta")
+Route.get('/getlocaliza', "LocalizacaoController.getLocalizacao")

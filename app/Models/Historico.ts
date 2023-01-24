@@ -1,8 +1,8 @@
 // import { DateTime } from 'luxon'
 import { BaseModel, column,  } from '@ioc:Adonis/Lucid/Orm'
 
-export default class Agua extends BaseModel {
-  public static table = 'agua'
+export default class Historico extends BaseModel {
+  public static table = 'historico'
 
   
   @column({ isPrimary: true })
@@ -12,16 +12,16 @@ export default class Agua extends BaseModel {
   public valor: number
 
   @column()
-  public d_vencimento: string
+  public d_entrada: string
 
   @column()
-  public d_pagamento: string
+  public tag: string
 
   @column()
-  public f_pagamento: string
+  public tipo: string
 
   @column()
-  public situacao: string
+  public id_tipo: number
 
   // @column.dateTime({ autoCreate: true })
   // public createdAt: DateTime

@@ -1,7 +1,7 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 // import Database, {  } from '@ioc:Adonis/Lucid/Database';
-import Aluguel from 'App/Models/Aluguel';
+import Aluguel from 'App/Models/Motorista';
 
 export default class AluguelController {
 

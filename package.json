@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "node ace serve --watch",
     "build": "node ace build --production",
-    "start": "node ./build/server.js"
+    "start": "node ./server.ts",
+    "olddebug": "node --nolazy --inspect-brk=9229 server.ts"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^5.4.1",
